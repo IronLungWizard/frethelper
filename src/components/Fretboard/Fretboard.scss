@@ -1,4 +1,97 @@
-.string {
+.guitarWrapper {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+    width: 100%;
+    
+    .fretsBorder{
+        height: 300px;
+        width: 10px;
+        background-color: #000000;
+    }
+    .stringsWrapper {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 888px;
+        background-color: #D8C5BF;
+        flex-direction: row;
+        .fretWrapper{
+            width: 100%;
+        }
+        .stringsBorder {
+            background-color: #D8C5BF;
+            height: 30px;
+            width: 90%;
+            min-width: 800px;
+        }
+    
+    }
+    .tuning{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 6px;
+        margin-right: 10px;    
+        
+        DIV {
+            width: 33px;
+            background-color: #5F6985;
+            height: 33px;
+            margin-bottom: 7px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30px;
+        }
+        .A {
+            background-color: #B65B58;
+        }
+        .B {
+            background-color: #C678A8;
+        }
+        .C {
+            background-color: #A8A754;
+        }
+        .D {
+            background-color: #C79466;
+        }
+        .E {
+            background-color: #7C6E92;
+        }
+        .F {
+            background-color: #6F81A5;
+        }
+        .G {
+            background-color: #5F7F72;
+        }
+        .A\# {
+            border: 1.5px solid #B65B58;
+        }
+        .B\# {
+            border: 1.5px solid #C678A8;
+        }
+        .C\# {
+            border: 1.5px solid #A8A754;
+        }
+        .D\# {
+            border: 1.5px solid #C79466;
+        }
+        .E\# {
+            border: 1.5px solid #7C6E92;
+        }
+        .F\# {
+            border: 1.5px solid #6F81A5;
+        }
+        .G\# {
+            border: 1.5px solid #5F7F72;
+        }
+    }
 }
