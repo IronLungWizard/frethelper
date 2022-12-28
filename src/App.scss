@@ -1,23 +1,12 @@
 .App {
     background-color: #373C4B;
-    width: auto;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-
-}
-
-.fretboardWrapper {
-    width: 90%;
-    height: 389px;
-    background-color: #5F6985;
-    border-radius: 38px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    min-width: 1570px;
-}
 
+}
 * {
     padding: 0;
     margin: 0;

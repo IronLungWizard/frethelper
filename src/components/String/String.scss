@@ -7,10 +7,14 @@
     align-items: center;
     justify-content: center;
     min-width: 800px;
-
-    
+    .fretsBorder {
+        background-color: black;
+        width: 13px;
+        height: 44px;
+        margin-left: -1px;
+    }
     SECTION {
-        width: 120%;
+        width: 90px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -27,15 +31,18 @@
             justify-content: center;
             border: 1px solid black;
             box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.24);
+            margin-right: -25px;
         }
         .fretSeparator {
-            height: 45px;
+            height: 44px;
             border: 0px;
             box-shadow: 0px 0px 0px;
             border-radius: 0px;
             background-color: black;
             width: 2px;
-            right: 1px;
+            right: 10px;
+            margin-right: -25px;
+
         }
     }
     .stringLine {
