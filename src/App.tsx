@@ -5,7 +5,9 @@ import Fretboard from './components/Fretboard/Fretboard';
 function App() {
   return (
     <div className="App">
+      <div className="appContainer">
         <Fretboard></Fretboard>
+      </div>
     </div>
   );
 }

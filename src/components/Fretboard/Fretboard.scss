@@ -4,8 +4,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 80%;
     min-width: 1003px;
+    margin-right: 10px;
+    margin-left: 10px;
     .editStringsButton {
         width: 193px;
         height: 77px;
@@ -18,7 +19,7 @@
         color: #E0E6FB;
     }
     .fretboard {
-        width: auto;
+
         background-color: #5F6985;
         border-radius: 38px;
         display: flex;
@@ -40,7 +41,7 @@
                 flex-direction: column;
                 margin-left: 20px;
                 margin-right: 10px;
-                margin-top: 10px;
+                margin-top: 8px;
                 .addStringButtonTop{
                     width: 30px;
                     height: 30px;
@@ -60,7 +61,7 @@
                     background: #97A3C6;
                     border: 1px solid #000000;
                     border-radius: 5px;
-                    margin-bottom: 12px;
+                    margin-bottom: 9px;
                     margin-top: 1px;
                     background-image: url("../../../src/images/ButtonMinus.svg");
                     background-size: 22px 22px;
@@ -72,8 +73,9 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                min-width: 888px;
+                min-width: 775px;
                 flex-direction: row;
+                margin-right: 10px;
                 .fretWrapper{
                     width: 100%;
                 }
@@ -94,9 +96,9 @@
             .tuningEditor{
                 margin-right: 20px;
                 margin-top: -35px;
-                margin-left: 50px;
+                margin-left: 20px;
                 .tuningWholeEditor {
-                    margin-left: -33px;
+                    margin-left: 0px;
                     .buttonWholeTuningLower {
                         width: 30px;
                         height: 30px;
@@ -110,12 +112,11 @@
                         background-position: 2px;
                     }
                     .tuningHeader {
-                        height: 30px;
+                        height: 34px;
                         background: #97A3C6;
                         border: 1px solid #000000;
                         border-radius: 5px;
-                        width: 100px;
-                        
+                        width: 34px;                    
                     }
                     .buttonWholeTuningHigher {
                         width: 30px;
@@ -138,7 +139,7 @@
                         background: #97A3C6;
                         border: 1px solid #000000;
                         border-radius: 5px;
-                        margin-bottom: 10px;
+                        margin-bottom: 9px;
                         margin-top: 1px;
                         background-image: url("../../../src/images/ArrowLeft.svg");
                         background-repeat: no-repeat;

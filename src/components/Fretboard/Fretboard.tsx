@@ -154,7 +154,7 @@ const Fretboard = () => {
                     <div className="tuningEditor">
                         <div className="tuningWholeEditor">
                             <button onClick = {() => tuneDownHandler(tune)}  className="buttonWholeTuningLower"></button>
-                            <div className="tuningHeader">Тональность</div>
+                            <div className="tuningHeader">Все</div>
                             <button onClick = {() => tuneUpHandler(tune)}   className="buttonWholeTuningHigher"></button> 
                         </div>
                         {noteEditor}
@@ -183,7 +183,7 @@ const Fretboard = () => {
             { 
                 !isEditEnabled 
                 ? 
-                setStringCount(13)
+                setStringCount(12)
                 :  
                 setStringCount(15)}}} 
         className="editStringsButton">Настроить инструмент</button>
