@@ -3,15 +3,29 @@ import React from 'react';
 import { useState } from 'react';
 import EditPage from './components/EditPage/EditPage';
 import ViewPage from './components/ViewPage/ViewPage';
+import { useEffect } from 'react';
 
 function App() {
-  const [tuning, setTuning] = useState([0, 5, 10, 3, 7, 0])
+  const [tuning, setTuning] = useState<number[]>([])
+  const defaultTuning = [0, 5, 10, 3, 7, 0]
   const [stringCount, setStringCount] = useState(15)
   const [isEditing, setIsEdiTing] = useState(false)
 
+  useEffect(() => {
+    if (localStorage.getItem("tuning")) {
+      setTuning(JSON.parse(localStorage.getItem("tuning") || '{}'))
+    }
+    else {
+      setTuning(defaultTuning)
+    }
+  }, []);
+
+
   const tuningCallback = (tuningData: number[]) => {
     setTuning(tuningData)
+    localStorage.setItem("tuning", JSON.stringify(tuningData));
   }
+
   const switchModeCallback = (isEditingData: boolean) => {
     setIsEdiTing(isEditingData)
     if (isEditingData) {
@@ -24,12 +38,12 @@ function App() {
 
   return (
     <div className="App">
-      <div className="appContainer">  
-      {isEditing ?
-        <EditPage switchModeCallback={switchModeCallback} tuningCallback={tuningCallback} tuning={tuning} stringCount={stringCount}></EditPage>
-        :
-        <ViewPage switchModeCallback={switchModeCallback} tuning={tuning} stringCount={stringCount}></ViewPage>
-      } 
+      <div className="appContainer">
+        {isEditing ?
+          <EditPage switchModeCallback={switchModeCallback} tuningCallback={tuningCallback} tuning={tuning} stringCount={stringCount}></EditPage>
+          :
+          <ViewPage switchModeCallback={switchModeCallback} tuning={tuning} stringCount={stringCount}></ViewPage>
+        }
       </div>
     </div>
   );

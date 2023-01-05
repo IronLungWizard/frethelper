@@ -29,7 +29,11 @@
   "dependencies": {
     "@types/react": "^18.0.26",
     "cross-env": "^7.0.3",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
+    "sort-by": "^1.2.0",
     "style-loader": "^3.3.1"
   }
 }

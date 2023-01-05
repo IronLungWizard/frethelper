@@ -4,13 +4,13 @@ import StringCountEditor from "../StringCountEditor/StringCountEditor"
 import Fretboard from "../Fretboard/Fretboard"
 import TuningEditor from "../TuningEditor/TuningEditor"
 
-const FretboardEditor = ({tuning, stringCount, tuningCallback}: {tuning: number[], stringCount: number; tuningCallback: Function}) => {
+const FretboardEditor = ({ editedTuning, stringCount, editedTuningCallback }: { editedTuning: number[], stringCount: number; editedTuningCallback: Function }) => {
     return (
-    <div className="fretboardEditorWrapper">
-       <TuningEditor tuningCallback={tuningCallback} tuning={tuning}></TuningEditor>
-       <Fretboard tuning={tuning} stringCount={stringCount}></Fretboard>
-       <StringCountEditor tuningCallback={tuningCallback} tuning={tuning}></StringCountEditor>
-    </div>
+        <div className="fretboardEditorWrapper">
+            <TuningEditor editedTuningCallback={editedTuningCallback} editedTuning={editedTuning}></TuningEditor>
+            <Fretboard tuning={editedTuning} stringCount={stringCount}></Fretboard>
+            <StringCountEditor editedTuningCallback={editedTuningCallback} tuning={editedTuning}></StringCountEditor>
+        </div>
     )
 }
 

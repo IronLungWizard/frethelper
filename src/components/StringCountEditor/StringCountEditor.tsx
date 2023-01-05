@@ -1,13 +1,13 @@
 import React from "react"
 import './StringCountEditor.scss'
 
-const StringCountEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCallback: Function}) => {
+const StringCountEditor = ({tuning, editedTuningCallback}: {tuning: number[]; editedTuningCallback: Function}) => {
     let stringsDelete = tuning!.map((tuneNote, index) => {
         return  <button className="deleteStringButton" key={index} onClick = {() => stringDeleteHandler(index)}></button>
     })
     function stringDeleteHandler (index: number)
     {
-        tuningCallback((existingItems: number[]) => {
+        editedTuningCallback((existingItems: number[]) => {
                 return [
                     ...existingItems.slice(0, index),
                     ...existingItems.slice(index + 1), 
@@ -19,7 +19,7 @@ const StringCountEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCa
 
 function addStringTopHandler (tuning: number[])
     {
-        tuningCallback((existingItems: number[]) => {
+        editedTuningCallback((existingItems: number[]) => {
                 return [
                     0,
                     ...existingItems
@@ -30,7 +30,7 @@ function addStringTopHandler (tuning: number[])
 
 function addStringBottomHandler (tuning: number[])
     {
-        tuningCallback((existingItems: number[]) => {
+        editedTuningCallback((existingItems: number[]) => {
                 return [ 
                     ...existingItems,
                     0

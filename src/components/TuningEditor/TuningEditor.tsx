@@ -1,10 +1,10 @@
 import React from "react"
 import './TuningEditor.scss'
 
-const TuningEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCallback: Function}) => {
+const TuningEditor = ({editedTuning, editedTuningCallback}: {editedTuning: number[]; editedTuningCallback: Function}) => {
     let noteList: string[] = ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#'];
     
-    let noteEditor = tuning!.map((tuneNote, index) => {
+    let noteEditor = editedTuning!.map((tuneNote, index) => {
         return  <div key = {index} className={noteList[tuneNote]}>
                     <button onClick = {() => stringTuneDownHandler(index, tuneNote)} className="buttonStringTuningLower"></button>
                     <div className={noteList[tuneNote]}>{noteList[tuneNote]}</div>
@@ -13,7 +13,7 @@ const TuningEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCallbac
     })
 
     function tuneDownHandler(tune: number[]) {
-        tuningCallback(
+        editedTuningCallback(
             tune.map(function(item) {
                     if (item == 11) 
                     {
@@ -28,7 +28,7 @@ const TuningEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCallbac
      }
 
      function tuneUpHandler(tune: number[]) {
-        tuningCallback(
+        editedTuningCallback(
             tune.map(function(item) {
                     if (item == 0) 
                     {
@@ -43,7 +43,7 @@ const TuningEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCallbac
      }
 
      function stringTuneDownHandler(index: number, tuneNote: number) {
-        tuningCallback((existingItems: number[]) => {
+        editedTuningCallback((existingItems: number[]) => {
             if (existingItems[index] == 11)
             {
                 return [
@@ -63,7 +63,7 @@ const TuningEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCallbac
     }
 
     function stringTuneUpHandler(index: number, tuneNote: number) {
-        tuningCallback((existingItems: number[]) => {
+        editedTuningCallback((existingItems: number[]) => {
             if (existingItems[index] == 0)
             {
                 return [
@@ -88,9 +88,9 @@ const TuningEditor = ({tuning, tuningCallback}: {tuning: number[]; tuningCallbac
     return (
     <div className="tuningEditor">
         <div className="tuningWholeEditor">
-            <button onClick = {() => tuneDownHandler(tuning)}  className="buttonWholeTuningLower"></button>
+            <button onClick = {() => tuneDownHandler(editedTuning)}  className="buttonWholeTuningLower"></button>
             <div className="tuningHeader">Все</div>
-            <button onClick = {() => tuneUpHandler(tuning)}   className="buttonWholeTuningHigher"></button> 
+            <button onClick = {() => tuneUpHandler(editedTuning)}   className="buttonWholeTuningHigher"></button> 
         </div>
         {noteEditor}
     </div>
