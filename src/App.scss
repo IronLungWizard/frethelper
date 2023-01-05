@@ -8,16 +8,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
     .appContainer {
+      display: block;
+      min-width: 1024px;
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) { 
+  .App {
+    background-color: #373C4B;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .appContainer {
+      display: block;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+      transition: .05s all;
+      width: 200vh;
+      height: 100vw; 
       display: flex;
       justify-content: center;
       align-items: center;
-      display: block;
-      max-width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      min-width: 1024px;
     }
   }
 }

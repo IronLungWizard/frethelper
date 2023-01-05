@@ -1,0 +1,33 @@
+
+.stringAddDeleteWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+    margin-right: 20px; 
+    .addStringButtonTop{
+        width: 30px;
+        height: 30px;
+        background: #97A3C6;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        background-image: url("../../../src/images/ButtonPlus.svg");
+        background-size: 22px 22px;
+        background-repeat: no-repeat;
+        background-position: 3px 3px;
+    }
+    .deleteStringButton{
+        width: 30px;
+        height: 30px;
+        background: #97A3C6;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 9px;
+        margin-top: 1px;
+        background-image: url("../../../src/images/ButtonMinus.svg");
+        background-size: 22px 22px;
+        background-repeat: no-repeat;
+        background-position: 3px 3px;
+    }
+}

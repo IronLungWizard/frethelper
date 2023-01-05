@@ -6,7 +6,6 @@ type StringProp = {
     stringCount: number
 }
 
-
 const String = (props: StringProp) => {
     let notes: string[] = ['E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B', 'C', 'C#', 'D', 'D#'];
     let notesRearranged: string[]
@@ -18,8 +17,8 @@ const String = (props: StringProp) => {
         }
     }
 
-let noteList = notesRearranged!.map((note) => {
-    return <section><div key={note} className={note}>{note}</div><div className="fretSeparator"></div></section>
+let noteList = notesRearranged!.map((note, index) => {
+    return <section><div key={index} className={note}>{note}</div><div className="fretSeparator"></div></section>
 })
     return (
             <div className="string">
