@@ -1,13 +1,14 @@
 import React from "react"
 import './ViewPage.scss'
 import RegularFretboard from "../RegularFretboard/RegularFretboard";
+import { Link } from "react-router-dom";
 
-const ViewPage = ({tuning, stringCount, switchModeCallback}: {tuning: number[], stringCount: number; switchModeCallback: Function}) => {
+const ViewPage = ({tuning, stringCount}: {tuning: number[], stringCount: number;}) => {
   
     return (
             <div className="viewPageWrapper">
                 <RegularFretboard tuning={tuning} stringCount={stringCount}></RegularFretboard>
-                <button className="editButton" onClick={() => switchModeCallback(true)}>Настроить инструмент</button>
+                <Link to='/edit'> <button  className="editButton">Настроить инструмент</button></Link>
             </div>
     )
 }
