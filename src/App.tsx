@@ -9,12 +9,14 @@ import {
   RouterProvider,
   BrowserRouter
 } from "react-router-dom";
+import ModalPreset from './components/ModalPreset/ModalPreset';
 
 function App() {
   const [tuning, setTuning] = useState<number[]>([])
-  const defaultTuning = [0, 5, 10, 3, 7, 0]
+  const defaultTuning = [0, 7, 3, 10, 5, 0]
   const [stringCount, setStringCount] = useState(15)
-  const [isEditing, setIsEdiTing] = useState(false)
+  const [modalPresetVisible, setModalPresetVisible] = useState(false)
+
 
   useEffect(() => {
     if (localStorage.getItem("tuning")) {
@@ -34,11 +36,11 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element:  <ViewPage tuning={tuning} stringCount={stringCount}></ViewPage>,
+      element:  <ViewPage tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></ViewPage>,
     },
     {
       path: "edit",
-      element:  <EditPage tuningCallback={tuningCallback} tuning={tuning} stringCount={stringCount}></EditPage>      
+      element:  <EditPage tuningCallback={tuningCallback} tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></EditPage>      
     },
    
   ]);
@@ -51,6 +53,12 @@ function App() {
       <React.StrictMode>
         <RouterProvider router={router} />
       </React.StrictMode>
+      {modalPresetVisible
+      ?
+      <ModalPreset tuningCallback={tuningCallback} setModalPresetVisible={setModalPresetVisible}></ModalPreset>
+      :
+      <></>
+      }
       </div>
     </div>
   );
