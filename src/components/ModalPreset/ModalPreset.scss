@@ -10,7 +10,7 @@
     justify-content: center;
     z-index: 5;
     backdrop-filter: blur(20px);
-    .modalWindow{
+    .modalWindow {
         position: absolute;
         width: 666px;
         height: 333px;
@@ -19,14 +19,25 @@
         z-index: 5;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
         display: flex;
-        align-items: center;
         flex-direction: column;
-        .modalWindowHeader{
-            margin-top: 27px;
-            font-size: 25px;
-            color: #E0E6FB;
+        align-items: center;
+        justify-content: center;
+
+        .modalArrow{
+            width: 37px;
+            height: 37px;
+            position: absolute;
+            left: 24px;
+            top: 24px;
+            transition: .1s all;
         }
-        .closeVector{
+
+        .modalArrow:hover {
+            transition: .1s all;
+            transform: scale(1.05);
+        }
+
+        .closeVector {
             width: 37px;
             height: 37px;
             position: absolute;
@@ -34,32 +45,64 @@
             top: 22px;
             transition: .1s all;
         }
-        .closeVector:hover{
+
+        .closeVector:hover {
             transition: .1s all;
             transform: scale(1.05);
         }
-        .buttonsWrapper {
+
+        .modalContentWrapper {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around;
-            width: 50%;
-            margin-top: 70px;
-            .modalButton{
-                width: 100px;
-                height: 100px;
-                left: 0px;
-                background: #97A3C6;
-                border-radius: 10px;
-                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
-                font-size: 24px;
-                line-height: 29px;
+            width: 100%;
+            align-items: center;
+            min-width: 236px;
+
+            .modalQuestion{
+                margin-top: 15px;
+                font-size: 25px;
                 color: #E0E6FB;
-                margin-bottom: 44px;
             }
-            .modalButton:hover{
-                transition: .1s all;
-                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+
+            .modalWindowHeader {
+                font-size: 25px;
+                color: #E0E6FB;
+                margin-bottom: 15px;
             }
+
+            .modalResult {
+              
+                font-size: 25px;
+                color: #E0E6FB;
+            }
+
+            .buttonsWrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 60%;
+                margin-top: 27px;
+
+                .modalButton {
+                    width: 100px;
+                    height: 100px;
+                    left: 0px;
+                    background: #97A3C6;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #E0E6FB;
+                    margin-bottom: 44px;
+                }
+
+                .modalButton:hover {
+                    transition: .1s all;
+                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+                }
+            }
+
         }
     }
 }

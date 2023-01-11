@@ -14,9 +14,10 @@ import ModalPreset from './components/ModalPreset/ModalPreset';
 function App() {
   const [tuning, setTuning] = useState<number[]>([])
   const defaultTuning = [0, 7, 3, 10, 5, 0]
+  const defaultInstrumentLine = ('6-струнная гитара, E-standard')
   const [stringCount, setStringCount] = useState(15)
   const [modalPresetVisible, setModalPresetVisible] = useState(false)
-
+  const [instrumentLine, setInstrumentLine] = useState<string>('')
 
   useEffect(() => {
     if (localStorage.getItem("tuning")) {
@@ -25,7 +26,20 @@ function App() {
     else {
       localStorage.setItem("tuning", JSON.stringify(defaultTuning))
     }
+
+
   }, []);
+
+
+  useEffect(() => {
+    if (localStorage.getItem("instrumentName")) {
+      setInstrumentLine(JSON.parse(localStorage.getItem("instrumentName") || '{}'))
+    }
+    else {
+      localStorage.setItem("instrumentName", JSON.stringify(defaultInstrumentLine))
+    }
+  }, []);
+  
 
 
   const tuningCallback = (tuningData: number[]) => {
@@ -33,14 +47,24 @@ function App() {
     localStorage.setItem("tuning", JSON.stringify(tuningData));
   }
 
+  const instrumentLineCallback = (instrumentLineData: string) => {
+    setInstrumentLine(instrumentLineData)
+    localStorage.setItem("instrumentName", JSON.stringify(instrumentLineData));
+  }
+
+  const instrumentLineDeleteCallback = () => {
+    setInstrumentLine("Свой инструмент")
+    localStorage.setItem("instrumentName", JSON.stringify("Свой инструмент"));
+  }
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element:  <ViewPage tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></ViewPage>,
+      element:  <ViewPage instrumentLine={instrumentLine} tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></ViewPage>,
     },
     {
       path: "edit",
-      element:  <EditPage tuningCallback={tuningCallback} tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></EditPage>      
+      element:  <EditPage instrumentLineDeleteCallback={instrumentLineDeleteCallback} instrumentLine={instrumentLine} tuningCallback={tuningCallback} tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></EditPage>      
     },
    
   ]);
@@ -55,7 +79,7 @@ function App() {
       </React.StrictMode>
       {modalPresetVisible
       ?
-      <ModalPreset tuningCallback={tuningCallback} setModalPresetVisible={setModalPresetVisible}></ModalPreset>
+      <ModalPreset instrumentLineCallback={instrumentLineCallback} tuningCallback={tuningCallback} setModalPresetVisible={setModalPresetVisible}></ModalPreset>
       :
       <></>
       }
