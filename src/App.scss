@@ -22,23 +22,17 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 
     .appContainer {
-      display: block;
-      -webkit-transform: rotate(90deg);
-      -moz-transform: rotate(90deg);
-      -o-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-      transform: rotate(90deg);
-      transition: .05s all;
-      width: 200vh;
-      height: 100vw;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      left: 0px;
     }
   }
+ 
 }
 
 

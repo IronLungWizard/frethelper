@@ -10,6 +10,7 @@ import {
   BrowserRouter
 } from "react-router-dom";
 import ModalPreset from './components/ModalPreset/ModalPreset';
+import MobileNavbar from './components/MobileNavbar/MobileNavbar';
 
 function App() {
   const [tuning, setTuning] = useState<number[]>([])
@@ -18,7 +19,9 @@ function App() {
   const [stringCount, setStringCount] = useState(15)
   const [modalPresetVisible, setModalPresetVisible] = useState(false)
   const [instrumentLine, setInstrumentLine] = useState<string>('')
-
+  
+  
+  
   useEffect(() => {
     if (localStorage.getItem("tuning")) {
       setTuning(JSON.parse(localStorage.getItem("tuning") || '{}'))
@@ -72,17 +75,14 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App"> 
       <div className="appContainer">
       <React.StrictMode>
         <RouterProvider router={router} />
       </React.StrictMode>
       {modalPresetVisible
-      ?
-      <ModalPreset instrumentLineCallback={instrumentLineCallback} tuningCallback={tuningCallback} setModalPresetVisible={setModalPresetVisible}></ModalPreset>
-      :
-      <></>
-      }
+      ?<ModalPreset instrumentLineCallback={instrumentLineCallback} tuningCallback={tuningCallback} setModalPresetVisible={setModalPresetVisible}></ModalPreset>
+      :<></>}
       </div>
     </div>
   );

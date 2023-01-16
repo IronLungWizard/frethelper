@@ -1,6 +1,24 @@
+@media only screen and (min-width: 1024px) {
 .editPageWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-
+    margin-top: 20px;
+    margin-bottom: 15px;
+    .pageHeader {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        font-size: 35px;
+        color: #E0E6FB;
+    }
+    .editPageInstruction{
+        font-size: 24px;
+        color: #E0E6FB;
+        width: 570px;
+        margin-top: 44px;
+    }
     .saveButton {
         width: 193px;
         height: 77px;
@@ -52,5 +70,43 @@
             color: #E0E6FB;
 
         }
+    }
+}
+}
+
+@media only screen and (max-width: 1023px) {
+    .editPageWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vh;
+        padding: 47px  20px  47px  10px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        transition: .05s all;
+        .pageHeader {
+            position: absolute;
+            visibility: hidden;
+        }
+        .editPageInstruction{
+            position: absolute;
+            visibility: hidden;
+        }
+        .presetSection{
+            position: absolute;
+            visibility: hidden;
+        }
+        .saveButton{
+            position: absolute;
+            visibility: hidden;
+        }
+        .exitButton{
+            position: absolute;
+            visibility: hidden;
+        }
+        
     }
 }

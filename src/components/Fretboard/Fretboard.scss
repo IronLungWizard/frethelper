@@ -1,28 +1,62 @@
-.fretboardWrapper {
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    min-width: 850px;
-    margin-right: 10px;
-    .fretboard {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-        .stringsBorderTop {
-            background-color: #D8C5BF;
-            height: 2px; 
-            width: 100%; 
-            z-index: 1;
+@media only screen and (min-width: 1023px) {
+    .fretboardWrapper {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        min-width: 850px;
+        margin-right: 10px;
+        .fretboard {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+            .stringsBorderTop {
+                background-color: #D8C5BF;
+                height: 2px; 
+                width: 100%; 
+                z-index: 1;
+            }
+            .stringsBorderBottom {
+                background-color: #D8C5BF;
+                height: 2px;
+                width: 100%; 
+                z-index: 1;
+            }
         }
-        .stringsBorderBottom {
-            background-color: #D8C5BF;
-            height: 2px;
-            width: 100%; 
-            z-index: 1;
-        }
+        
     }
-    
+}
+
+@media only screen and (max-width: 1023px) {
+    .fretboardWrapper {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        min-width: 850px;
+        margin-right: 10px;
+        
+        .fretboard {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+            .stringsBorderTop {
+                background-color: #D8C5BF;
+                height: 2px; 
+                width: 100%; 
+                z-index: 1;
+            }
+            .stringsBorderBottom {
+                background-color: #D8C5BF;
+                height: 2px;
+                width: 100%; 
+                z-index: 1;
+            }
+        }
+        
+    }
 }

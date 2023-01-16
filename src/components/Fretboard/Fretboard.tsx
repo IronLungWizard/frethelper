@@ -7,7 +7,6 @@ const Fretboard = ({tuning, stringCount}: {tuning: number[], stringCount: number
     let stringsList = tuning!.map((note, index) => {
     return  <String key={index} stringCount = {stringCount} startNote={noteList[note]}></String>
     })
-
     return (
     <div className="fretboardWrapper">
         <div className="fretboard">
