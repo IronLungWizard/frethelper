@@ -3,12 +3,18 @@ import './ViewPage.scss'
 import RegularFretboard from "../RegularFretboard/RegularFretboard";
 import { Link } from "react-router-dom";
 import MobileNavbar from "../MobileNavbar/MobileNavbar";
+import { useState } from "react";
 
-const ViewPage = ({tuning, stringCount, setModalPresetVisible, instrumentLine}: {tuning: number[], stringCount: number, setModalPresetVisible: Function, instrumentLine: string;}) => {
+const ViewPage = ({tuning, setModalPresetVisible, instrumentLine}: 
+                  {tuning: number[], setModalPresetVisible: Function, instrumentLine: string}) => {
   
+const [stringCount, setStringCount] = useState(15)                   
+const infoText = `Для изменения строя или количества струн нажмите “Настроить инструмент”\n
+        Для смены пресета инструмента нажмите “Сменить инструмент”
+    `         
     return (
         <>  
-            <MobileNavbar setModalPresetVisible={setModalPresetVisible}></MobileNavbar>
+            <MobileNavbar infoText={infoText} setModalPresetVisible={setModalPresetVisible}></MobileNavbar>
             <div className="viewPageWrapper">
                 <h1 className="pageHeader">Путеводитель по гитарному грифу</h1>
                 <div className="presetSection">
@@ -16,9 +22,10 @@ const ViewPage = ({tuning, stringCount, setModalPresetVisible, instrumentLine}: 
                     <h2 className="presetHeader">{instrumentLine}</h2>
                 </div>
                 <RegularFretboard tuning={tuning} stringCount={stringCount}></RegularFretboard>
-                <Link to='/edit'> <button  className="editButton">Настроить инструмент</button></Link>
-                <span className="viewPageInstruction">-Для изменения строя или количества струн нажмите “Настроить инструмент”<br/>
-                -Для смены пресета инструмента нажмите “Сменить инструмент”</span>
+                <div className="viewPageUnder">
+                    <Link to='/edit'> <button onClick={() => {setStringCount(14)}} className="editButton">Настроить инструмент</button></Link>
+                    <span className="viewPageInstruction">{infoText}</span>
+                </div>
             </div>
         </>
     )

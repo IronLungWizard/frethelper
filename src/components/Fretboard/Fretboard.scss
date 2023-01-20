@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1023px) {
+@media only screen and (min-width: 1024px) {
     .fretboardWrapper {
         height: auto;
         display: flex;
@@ -6,26 +6,63 @@
         flex-direction: row;
         min-width: 850px;
         margin-right: 10px;
+        margin-bottom: 20px;
+
         .fretboard {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
             .stringsBorderTop {
                 background-color: #D8C5BF;
-                height: 2px; 
-                width: 100%; 
+                height: 2px;
+                width: 100%;
                 z-index: 1;
             }
+
             .stringsBorderBottom {
                 background-color: #D8C5BF;
                 height: 2px;
-                width: 100%; 
+                width: 100%;
                 z-index: 1;
             }
+
+            .fretCountPanel {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+                height: fit-content;
+                min-width: 800px;
+                width: 100%;
+                margin-left: 6px;
+                padding-right: 10px;
+
+                .fretCountCell {
+                    width: 100px;
+                    display: flex;
+                    flex-direction: row;
+
+                    IMG {
+                        margin-top: -3px;
+                        width: 15px;
+                        height: 15px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .fretCounterDotCoupleVertical {
+                        visibility: hidden;
+                        position: absolute;
+                    }
+
+                    .fretCounterDotCoupleHorizontal {
+                        width: 36px;
+                    }
+                }
+            }
         }
-        
     }
 }
 
@@ -35,28 +72,61 @@
         display: flex;
         justify-content: center;
         flex-direction: row;
-        min-width: 850px;
-        margin-right: 10px;
-        
+        min-height: 850px;
+        min-width: none;
+        margin-top: 20px;
+        margin-left: 25px;
+
         .fretboard {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+            width: 100%;
+
             .stringsBorderTop {
                 background-color: #D8C5BF;
-                height: 2px; 
-                width: 100%; 
+                height: 100%;
+                width: 2px;
                 z-index: 1;
             }
+
             .stringsBorderBottom {
                 background-color: #D8C5BF;
-                height: 2px;
-                width: 100%; 
+                height: 100%;
+                width: 2px;
                 z-index: 1;
             }
+
+            .fretCountPanel {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+                height: fit-content;
+
+                .fretCountCell {
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    IMG {
+                        margin-top: -1px;
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    .fretCounterDotCoupleVertical {
+                        height: 36px;
+                    }
+
+                    .fretCounterDotCoupleHorizontal {
+                        visibility: hidden;
+                        position: absolute;
+                    }
+                }
+            }
         }
-        
     }
 }

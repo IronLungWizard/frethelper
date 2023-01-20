@@ -1,3 +1,4 @@
+@media only screen and (min-width: 1024px) {
 .string {
     display: flex;
     flex-direction: row;
@@ -22,7 +23,6 @@
         background-image: url("../../../src/images/LineVector.svg");
         background-position: 2px;
         DIV {
-         
             background-color: #D8C5BF;
             width: 35px;
             height: 35px;
@@ -103,4 +103,118 @@
     }
 
     
+}
+}
+@media only screen and (max-width: 1023px) {
+    .string {
+        display: flex;
+        flex-direction: column;
+        background-color: #D8C5BF;
+        width: 40px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        min-height: 800px;
+        min-width: 45px;
+        .fretsBorder {
+            background-color: black;
+            width: 50px;
+            height: 16px;
+            margin-left: 0px;
+            z-index: 2;
+        }
+        SECTION {
+            height: 100px;
+            width: unset;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            background-image: url("../../../src/images/LineVectorVertical.svg");
+            background-position: 8px;
+            DIV {
+                background-color: #D8C5BF;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid black;
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.24);
+                margin-right: 0px;
+                margin-top: 31px;
+            }
+            .fretSeparator {
+                height: 2px;
+                border: 0px;
+                box-shadow: 0px 0px 0px;
+                border-radius: 0px;
+                background-color: black;
+                width: 50px;
+                right: 10px;
+                margin-right: 0px;
+                z-index: 2;
+                
+                
+            }
+        }
+        .stringLine {
+            position: absolute;
+            height: 100px;
+            border: 0px;
+            box-shadow: 0px 0px 0px;
+            border-radius: 0px;
+            background-color: black;
+            width: 2px;
+            margin-left: 0px;
+            z-index: 1;
+        }
+       
+            
+        .A {
+            background-color: #B65B58;
+        }
+        .B {
+            background-color: #C678A8;
+        }
+        .C {
+            background-color: #A8A754;
+        }
+        .D {
+            background-color: #C79466;
+        }
+        .E {
+            background-color: #7C6E92;
+        }
+        .F {
+            background-color: #6F81A5;
+        }
+        .G {
+            background-color: #5F7F72;
+        }
+        .A\# {
+            border: 3px solid #B65B58;
+        }
+        .B\# {
+            border: 3px solid #C678A8;
+        }
+        .C\# {
+            border: 3px solid #A8A754;
+        }
+        .D\# {
+            border: 3px solid #C79466;
+        }
+        .E\# {
+            border: 3px solid #7C6E92;
+        }
+        .F\# {
+            border: 3px solid #6F81A5;
+        }
+        .G\# {
+            border: 3px solid #5F7F72;
+        }
+    
+        
+    }
 }

@@ -6,6 +6,7 @@
     width: 100%;
     margin-top: 20px;
     margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
     .pageHeader {
         margin-left: auto;
         margin-right: auto;
@@ -13,37 +14,49 @@
         font-size: 35px;
         color: #E0E6FB;
     }
-    .editPageInstruction{
-        font-size: 24px;
+    .redactingHeader{
+        font-size: 27px;
         color: #E0E6FB;
-        width: 570px;
-        margin-top: 44px;
+        margin-left: auto;
     }
-    .saveButton {
-        width: 193px;
-        height: 77px;
-        left: 0px;
-        background: #5F6985;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
+    .editPageUnder{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         margin-top: 44px;
-        font-size: 24px;
-        line-height: 29px;
-        color: #E0E6FB;
-    }
+        .editPageInstruction{
+            white-space: pre-line;
+            font-size: 24px;
+            color: #E0E6FB;
+            width: 570px;
+        }
+        .editPageButtonsContainer{
+            width: fit-content;
+            .saveButton {
+                width: 193px;
+                height: 77px;
+                left: 0px;
+                background: #5F6985;
+                border-radius: 10px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
+                font-size: 24px;
+                line-height: 29px;
+                color: #E0E6FB;
+            }
 
-    .exitButton {
-        width: 193px;
-        height: 77px;
-        left: 0px;
-        background: #5F6985;
-        border-radius: 10px;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
-        margin-top: 44px;
-        font-size: 24px;
-        line-height: 29px;
-        color: #E0E6FB;
-        margin-left: 30px;
+            .exitButton {
+                width: 193px;
+                height: 77px;
+                left: 0px;
+                background: #5F6985;
+                border-radius: 10px;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
+                font-size: 24px;
+                line-height: 29px;
+                color: #E0E6FB;
+                margin-left: 30px;
+            }
+        }
     }
 
     .presetSection {
@@ -75,18 +88,17 @@
 }
 
 @media only screen and (max-width: 1023px) {
+
     .editPageWrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100vh;
-        padding: 47px  20px  47px  10px;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-        transition: .05s all;
+        margin-top: 90px;
+        height: fit-content;
+        display: flex ;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 100px;
+        font-family: Arial, Helvetica, sans-serif;
         .pageHeader {
             position: absolute;
             visibility: hidden;
@@ -99,14 +111,19 @@
             position: absolute;
             visibility: hidden;
         }
-        .saveButton{
+        DIV {
+            display: flex;
+            justify-content: space-evenly;
+        .saveButton {
             position: absolute;
             visibility: hidden;
         }
-        .exitButton{
+    
+        .exitButton {
             position: absolute;
             visibility: hidden;
         }
+    }
         
     }
 }

@@ -92,7 +92,9 @@ const TuningEditor = ({editedTuning, editedTuningCallback}: {editedTuning: numbe
             <div className="tuningHeader">Все</div>
             <button onClick = {() => tuneUpHandler(editedTuning)}   className="buttonWholeTuningHigher"></button> 
         </div>
-        {noteEditor}
+        <div className="stringNoteEditor">
+            {noteEditor}
+        </div>
     </div>
     )
 }

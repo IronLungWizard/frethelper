@@ -1,3 +1,4 @@
+@media only screen and (min-width: 777px) {
 .modalWrapper {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.1);
@@ -91,7 +92,7 @@
                     background: #97A3C6;
                     border-radius: 10px;
                     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
-                    font-size: 24px;
+                    font-size: 22px;
                     line-height: 29px;
                     color: #E0E6FB;
                     margin-bottom: 44px;
@@ -106,3 +107,118 @@
         }
     }
 }
+}
+
+@media only screen and (max-width: 776px) {
+    .modalWrapper {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        .modalWindow {
+            position: absolute;
+            width: 350px;
+            height: 550px;
+            background: #5F6985;
+            border-radius: 10px;
+            z-index: 5;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    
+            .modalArrow{
+                width: 37px;
+                height: 37px;
+                position: absolute;
+                left: 24px;
+                top: 24px;
+                transition: .1s all;
+            }
+    
+            .modalArrow:hover {
+                transition: .1s all;
+                transform: scale(1.05);
+            }
+    
+            .closeVector {
+                width: 37px;
+                height: 37px;
+                position: absolute;
+                right: 22px;
+                top: 22px;
+                transition: .1s all;
+            }
+    
+            .closeVector:hover {
+                transition: .1s all;
+                transform: scale(1.05);
+            }
+    
+            .modalContentWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 100%;
+                align-items: center;
+                min-width: 236px;
+                text-align: center;
+                .modalQuestion{
+                    margin-top: 15px;
+                    font-size: 25px;
+                    color: #E0E6FB;
+                }
+    
+                .modalWindowHeader {
+                    font-size: 25px;
+                    color: #E0E6FB;
+                    margin-bottom: 15px;
+                    margin-top: 15px;
+                
+                }
+    
+                .modalResult {
+                    margin-top: 15px;
+                    font-size: 25px;
+                    color: #E0E6FB;
+                }
+    
+                .buttonsWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 60%;
+                    margin-top: 27px;
+                    
+                    .modalButton {
+                        width: 100px;
+                        height: 100px;
+                        left: 0px;
+                        background: #97A3C6;
+                        border-radius: 10px;
+                        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
+                        font-size: 22px;
+                        line-height: 29px;
+                        color: #E0E6FB;
+                        margin: 0 auto ;
+                        margin-bottom: 44px;
+                    }
+    
+                    .modalButton:hover {
+                        transition: .1s all;
+                        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+                    }
+                }
+    
+            }
+        }
+    }
+    }

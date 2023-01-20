@@ -1,16 +1,17 @@
 @media only screen and (min-width: 1024px) {
   .App {
     background-color: #373C4B;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-
+    align-items: flex-start;
     .appContainer {
       display: block;
       min-width: 1024px;
       width: 90%;
+      margin-top: 30px;
     }
   }
 }
@@ -18,18 +19,20 @@
 @media only screen and (max-width: 1023px) {
   .App {
     background-color: #373C4B;
-    width: 100vw;
-    height: 100vh;
+    height: 300vh;
     display: flex;
     justify-content: center;
+    width: 100%;
+    min-width: 375px;
 
     .appContainer {
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 300vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      left: 0px;
+      overflow-x:scroll;
+      .scrollContainer{
+        margin:0 auto ;
+      }
     }
   }
  

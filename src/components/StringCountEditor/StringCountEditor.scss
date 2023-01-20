@@ -1,10 +1,24 @@
-
+@media only screen and (min-width: 1024px) {
 .stringAddDeleteWrapper{
     display: flex;
     flex-direction: column;
     margin-top: 6px;
     margin-right: 20px; 
+    
     .addStringButtonTop{
+        width: 30px;
+        height: 30px;
+        background: #97A3C6;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        background-image: url("../../../src/images/ButtonPlus.svg");
+        background-size: 22px 22px;
+        background-repeat: no-repeat;
+        background-position: 3px 3px;
+    }
+    .addStringButtonBottom{
         width: 30px;
         height: 30px;
         background: #97A3C6;
@@ -31,3 +45,53 @@
         background-position: 3px 3px;
     }
 }
+}
+@media only screen and (max-width: 1023px) {
+    .stringAddDeleteWrapper{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        justify-content: space-between;
+        .addStringButtonTop{
+            width: 30px;
+            height: 30px;
+            background: #97A3C6;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-right: 5px;
+            font-size: 30px;
+            background-image: url("../../../src/images/ButtonPlus.svg");
+            background-size: 22px 22px;
+            background-repeat: no-repeat;
+            background-position: 3px 3px;
+        }
+        .addStringButtonBottom{
+            width: 30px;
+            height: 30px;
+            background: #97A3C6;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            font-size: 30px;
+            background-image: url("../../../src/images/ButtonPlus.svg");
+            background-size: 22px 22px;
+            background-repeat: no-repeat;
+            background-position: 3px 3px;
+        }
+        .deleteStringButton{
+            width: 30px;
+            height: 30px;
+            background: #97A3C6;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-right: 5px;
+            background-image: url("../../../src/images/ButtonMinus.svg");
+            background-size: 22px 22px;
+            background-repeat: no-repeat;
+            background-position: 3px 3px;
+        }
+    }
+    }

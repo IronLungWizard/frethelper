@@ -11,12 +11,12 @@ import {
 } from "react-router-dom";
 import ModalPreset from './components/ModalPreset/ModalPreset';
 import MobileNavbar from './components/MobileNavbar/MobileNavbar';
+import FretboardEditor from './components/FretboardEditor/FretboardEditor';
 
 function App() {
   const [tuning, setTuning] = useState<number[]>([])
   const defaultTuning = [0, 7, 3, 10, 5, 0]
   const defaultInstrumentLine = ('6-струнная гитара, E-standard')
-  const [stringCount, setStringCount] = useState(15)
   const [modalPresetVisible, setModalPresetVisible] = useState(false)
   const [instrumentLine, setInstrumentLine] = useState<string>('')
   
@@ -63,11 +63,12 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element:  <ViewPage instrumentLine={instrumentLine} tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></ViewPage>,
+      element:  <ViewPage instrumentLine={instrumentLine} tuning={tuning} setModalPresetVisible={setModalPresetVisible}></ViewPage>,
     },
     {
       path: "edit",
-      element:  <EditPage instrumentLineDeleteCallback={instrumentLineDeleteCallback} instrumentLine={instrumentLine} tuningCallback={tuningCallback} tuning={tuning} stringCount={stringCount} setModalPresetVisible={setModalPresetVisible}></EditPage>      
+      element:  <EditPage instrumentLineDeleteCallback={instrumentLineDeleteCallback} instrumentLine={instrumentLine} tuningCallback={tuningCallback} 
+      tuning={tuning}  setModalPresetVisible={setModalPresetVisible}></EditPage>      
     },
    
   ]);
@@ -77,12 +78,14 @@ function App() {
   return (
     <div className="App"> 
       <div className="appContainer">
-      <React.StrictMode>
-        <RouterProvider router={router} />
-      </React.StrictMode>
+         <div className="scrollContainer"> 
+        <React.StrictMode>
+          <RouterProvider router={router} />
+        </React.StrictMode>
+        </div>
       {modalPresetVisible
       ?<ModalPreset instrumentLineCallback={instrumentLineCallback} tuningCallback={tuningCallback} setModalPresetVisible={setModalPresetVisible}></ModalPreset>
-      :<></>}
+      :<></>} 
       </div>
     </div>
   );

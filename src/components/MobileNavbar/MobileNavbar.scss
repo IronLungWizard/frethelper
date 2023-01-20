@@ -1,115 +1,143 @@
 @media only screen and (max-width: 1023px) {
-.menu {
-    width: 52vw;
-    height: 80px;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    background-color: #373C4B;
-    border-bottom: 2px solid #2F3340;
-    display: flex;
-    .menuBurger {
-        margin-left: 20px;
-        width: 50px;
-    }
-    .menuInfo{
-        margin-left: auto;
-        margin-right: 20px;
-        margin-top: 10px;
-        width: 30px;
-    }
-    .navbarMenuWrapper{
+    .menu {
+        width: 100%;
+        height: 80px;
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.1);
-        width: 52vw;
-        height: 100vh;
-        top: 0px;
-        left: 0px;
+        z-index: 10;
+        top: 0;
+        background-color: #373C4B;
+        border-bottom: 2px solid #2F3340;
         display: flex;
-        justify-content: center;
-        z-index: 5;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        .navbarMenu{
-            width: 300px;
-            height: 600px;
-            background-color: #373C4B;
+        left: 0px;
+        min-width: 375px;
+
+        .navbarProjectName {
+            font-size: 35px;
+            color: #E0E6FB;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 22px;
+        }
+
+        .menuBurger {
+            margin-left: 20px;
+            width: 50px;
+        }
+
+        .menuInfo {
+            margin-right: 40px;
+            margin-top: 10px;
+            width: 30px;
+        }
+
+        .navbarMenuWrapper {
             position: absolute;
-            border-right: 2px  solid #2F3340;
-            border-bottom: 2px  solid #2F3340;
-            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 0px 0px 41px 0px;
+            background-color: rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 300vh;
+            top: 0px;
             left: 0px;
-            .navbarMenuEditLink {
-                width: 100%;
-                height: 90px;
-                margin-top: 20px;   
-                border-top: 2px  solid #2F3340;
-                border-bottom: 2px  solid #2F3340;
-                display: flex; 
-                align-items: center;
-                padding-left: 20px;
-                font-size: 24px;
-                color: #E0E6FB;
-            }
-            .navbarMenuPresetLink {
-                width: 100%;
-                height: 90px;
-                border-bottom: 2px  solid #2F3340;
-                display: flex; 
-                align-items: center;
-                padding-left: 20px;
-                font-size: 24px;
-                color: #E0E6FB;
-            }
-            .closeVector {
-                margin-left: 20px;
-                margin-top: 20px;
-                width: 50px;
-            }
-        }
-    }
-    .navbarInfoWrapper{
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.1);
-        width: 52vw;
-        height: 100vh;
-        top: 0px;
-        left: 0px;
-        display: flex;
-        justify-content: center;
-        z-index: 5;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        .navbarInfo{
-            width: 400px;
-            height: 600px;
-            background-color: #373C4B;
-            position: absolute;
-            border-left: 2px  solid #2F3340;
-            border-bottom: 2px  solid #2F3340;
-            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 0px 0px 0px 41px;
-            right: 0px;
             display: flex;
-            flex-direction: column;
-            .closeVector {
-                margin-left: 330px;
-                margin-top: 20px;
-                width: 50px;
+            justify-content: center;
+            z-index: 5;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-right: 20px;
+
+            .navbarMenu {
+                width: 300px;
+                height: 600px;
+                background-color: #373C4B;
+                position: absolute;
+                border-right: 2px solid #2F3340;
+                border-bottom: 2px solid #2F3340;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 0px 0px 41px 0px;
+                left: 0px;
+
+                .navbarMenuEditLink {
+                    width: 100%;
+                    height: 90px;
+
+                    border-bottom: 2px solid #2F3340;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 20px;
+                    font-size: 24px;
+                    color: #E0E6FB;
+                }
+
+                .navbarMenuPresetLink {
+                    width: 100%;
+                    height: 90px;
+                    margin-top: 20px;
+                    border-top: 2px solid #2F3340;
+                    border-bottom: 2px solid #2F3340;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 20px;
+                    font-size: 24px;
+                    color: #E0E6FB;
+                }
+
+                .closeVector {
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    width: 50px;
+                }
             }
-            .navbarInfoText {
-                font-size: 24px;
-                color: #E0E6FB;
-                margin-left: 30px;
-                margin-top: 44px;
+        }
+
+        .navbarInfoWrapper {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 300vh;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            z-index: 5;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+
+            .navbarInfo {
+                width: 350px;
+                height: 600px;
+                background-color: #373C4B;
+                position: absolute;
+                border-left: 2px solid #2F3340;
+                border-bottom: 2px solid #2F3340;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 0px 0px 0px 41px;
+                right: 0px;
+                display: flex;
+                flex-direction: column;
+
+                .closeVector {
+                    margin-left: 280px;
+                    margin-top: 20px;
+                    width: 50px;
+                }
+
+                .navbarInfoText {
+                    font-size: 24px;
+                    color: #E0E6FB;
+                    margin-left: 30px;
+                    margin-top: 44px;
+                    white-space: pre-line;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-right: 20px;
+                }
             }
         }
     }
 }
-}
+
 @media only screen and (min-width: 1024px) {
     .menu {
         visibility: hidden;
+        position: absolute;
     }
 }

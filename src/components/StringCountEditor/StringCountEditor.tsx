@@ -43,7 +43,7 @@ function addStringBottomHandler (tuning: number[])
        <div className="stringAddDeleteWrapper">
             <button onClick = {() => addStringTopHandler(tuning)} className="addStringButtonTop"></button>
             {stringsDelete} 
-            <button onClick = {() => addStringBottomHandler(tuning)} className="addStringButtonTop"></button> 
+            <button onClick = {() => addStringBottomHandler(tuning)} className="addStringButtonBottom"></button> 
        </div>
     )
 }
