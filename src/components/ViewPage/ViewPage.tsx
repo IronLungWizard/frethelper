@@ -16,7 +16,7 @@ const infoText = `Для изменения строя или количеств
         <>  
             <MobileNavbar infoText={infoText} setModalPresetVisible={setModalPresetVisible}></MobileNavbar>
             <div className="viewPageWrapper">
-                <h1 className="pageHeader">Путеводитель по гитарному грифу</h1>
+                <h1 className="pageHeader">Frethelper - путеводитель по гитарному грифу</h1>
                 <div className="presetSection">
                     <button className="modalButton" onClick={() => { setModalPresetVisible(true)}}>Сменить инструмент</button>
                     <h2 className="presetHeader">{instrumentLine}</h2>

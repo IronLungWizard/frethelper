@@ -17,7 +17,9 @@
     .redactingHeader{
         font-size: 27px;
         color: #E0E6FB;
-        margin-left: auto;
+        margin-right: auto;
+        margin-top: 27px;
+        margin-bottom: 67px;
     }
     .editPageUnder{
         display: flex;
@@ -26,7 +28,7 @@
         margin-top: 44px;
         .editPageInstruction{
             white-space: pre-line;
-            font-size: 24px;
+            font-size: 20px;
             color: #E0E6FB;
             width: 570px;
         }
@@ -59,31 +61,6 @@
         }
     }
 
-    .presetSection {
-        display: flex;
-        align-items: center;
-        margin-bottom: 44px;
-
-        .presetHeader {
-            font-size: 24px;
-            line-height: 29px;
-            color: #E0E6FB;
-            margin-left: 30px;
-        }
-
-        .modalButton {
-            width: 193px;
-            height: 77px;
-            left: 0px;
-            background: #5F6985;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.14);
-            font-size: 24px;
-            line-height: 29px;
-            color: #E0E6FB;
-
-        }
-    }
 }
 }
 

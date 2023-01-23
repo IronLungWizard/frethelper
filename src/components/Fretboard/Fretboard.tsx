@@ -32,11 +32,11 @@ const Fretboard = ({tuning, stringCount}: {tuning: number[], stringCount: number
         <div className="fretboard">
             <div className="fretCountPanel">
                 {fretCount}
-            </div>
+            </div> 
             <div className="stringsBorderTop"></div>
                 {stringsList}
             <div className="stringsBorderBottom"></div>
-        </div>
+       </div>  {/* <String key={1} stringCount = {15} startNote={noteList[1]}></String> */}
     </div>
     )
 }

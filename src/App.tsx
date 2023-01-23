@@ -67,8 +67,8 @@ function App() {
     },
     {
       path: "edit",
-      element:  <EditPage instrumentLineDeleteCallback={instrumentLineDeleteCallback} instrumentLine={instrumentLine} tuningCallback={tuningCallback} 
-      tuning={tuning}  setModalPresetVisible={setModalPresetVisible}></EditPage>      
+      element:  <EditPage instrumentLineDeleteCallback={instrumentLineDeleteCallback} tuningCallback={tuningCallback} 
+      tuning={tuning}></EditPage>      
     },
    
   ]);

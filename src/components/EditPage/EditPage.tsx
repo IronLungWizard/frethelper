@@ -6,8 +6,8 @@ import { Link } from "react-router-dom"
 import MobileNavbar from "../MobileNavbar/MobileNavbar"
 import BottomPanel from "../BottomPanel/BottomPanel"
 const EditPage = (
-  { tuning, tuningCallback, setModalPresetVisible, instrumentLine, instrumentLineDeleteCallback}: 
-  { tuning: number[], tuningCallback: Function, setModalPresetVisible: Function, instrumentLine: string, 
+  { tuning, tuningCallback, instrumentLineDeleteCallback}: 
+  { tuning: number[], tuningCallback: Function,  
     instrumentLineDeleteCallback: Function}
   ) => {
   const [editedTuning, setEditedTuning] = useState(tuning)
@@ -30,12 +30,9 @@ const EditPage = (
   }, [tuning]);
   return (
     <>
-    <MobileNavbar infoText={infoText} setModalPresetVisible={setModalPresetVisible}></MobileNavbar>
     <div className="editPageWrapper">
-      <h1 className="pageHeader">Путеводитель по гитарному грифу</h1>
+      <h1 className="pageHeader">Frethelper - путеводитель по гитарному грифу</h1>
       <div className="presetSection">
-        <button className="modalButton" onClick={() => {setModalPresetVisible(true)}}>Сменить инструмент</button>
-        <h2 className="presetHeader">{instrumentLine}</h2>
         <h2 className="redactingHeader">Редактирование...</h2>
       </div>
        <FretboardEditor editedTuningCallback={editedTuningCallback} editedTuning={editedTuning} stringCount={stringCount}></FretboardEditor>  
