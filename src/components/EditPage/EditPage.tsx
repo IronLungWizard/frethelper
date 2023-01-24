@@ -6,9 +6,9 @@ import { Link } from "react-router-dom"
 import MobileNavbar from "../MobileNavbar/MobileNavbar"
 import BottomPanel from "../BottomPanel/BottomPanel"
 const EditPage = (
-  { tuning, tuningCallback, instrumentLineDeleteCallback}: 
+  { tuning, tuningCallback, instrumentLineDeleteCallback, setModalPresetVisible}: 
   { tuning: number[], tuningCallback: Function,  
-    instrumentLineDeleteCallback: Function}
+    instrumentLineDeleteCallback: Function, setModalPresetVisible: Function}
   ) => {
   const [editedTuning, setEditedTuning] = useState(tuning)
   const editedTuningCallback = (editedTuningData: number[]) => {

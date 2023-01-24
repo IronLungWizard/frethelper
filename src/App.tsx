@@ -67,7 +67,7 @@ function App() {
     },
     {
       path: "frethelper/edit",
-      element:  <EditPage instrumentLineDeleteCallback={instrumentLineDeleteCallback} tuningCallback={tuningCallback} 
+      element:  <EditPage instrumentLineDeleteCallback={instrumentLineDeleteCallback} setModalPresetVisible={setModalPresetVisible} tuningCallback={tuningCallback} 
       tuning={tuning}></EditPage>      
     },
    
