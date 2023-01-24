@@ -38,8 +38,8 @@ const EditPage = (
        <FretboardEditor editedTuningCallback={editedTuningCallback} editedTuning={editedTuning} stringCount={stringCount}></FretboardEditor>  
       <div className="editPageUnder">
         <div className="editPageButtonsContainer">
-          <Link to='/'><button className="saveButton" onClick={() => {saveTuning(editedTuning)}}>Сохранить изменения</button></Link>
-          <Link to='/'><button className="exitButton">Отменить изменения</button></Link>
+          <Link to='/frethelper'><button className="saveButton" onClick={() => {saveTuning(editedTuning)}}>Сохранить изменения</button></Link>
+          <Link to='/frethelper'><button className="exitButton">Отменить изменения</button></Link>
         </div>
         <span className="editPageInstruction">{infoText}</span>
       </div>

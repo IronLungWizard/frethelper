@@ -17,7 +17,7 @@ const [mobileInfoVisible, setMobileInfoVisible] = useState(false)
         <div className="navbarMenu" onClick={(e) => e.stopPropagation()}>
           <img src={MenuCross} onClick={() => setMobileMenuVisible(false)} className="closeVector"></img>
           <div className="navbarMenuPresetLink" onClick={() => {setModalPresetVisible(true); setMobileMenuVisible(false)}} >Выбрать инструмент</div>
-          <Link to='/edit' className="navbarMenuEditLink">Настроить инструмент</Link>
+          <Link to='/frethelper/edit' className="navbarMenuEditLink">Настроить инструмент</Link>
         </div>
       </div>:<></>}
 

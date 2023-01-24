@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --port 3000",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" webpack",
+    "dev": "cross-env TS_NODE_PROJECT=\"tsconfig.json\" webpack serve"
   },
   "author": "",
   "license": "MIT",

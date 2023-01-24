@@ -23,7 +23,7 @@ const infoText = `Для изменения строя или количеств
                 </div>
                 <RegularFretboard tuning={tuning} stringCount={stringCount}></RegularFretboard>
                 <div className="viewPageUnder">
-                    <Link to='/edit'> <button onClick={() => {setStringCount(14)}} className="editButton">Настроить инструмент</button></Link>
+                    <Link to='/frethelper/edit'> <button onClick={() => {setStringCount(14)}} className="editButton">Настроить инструмент</button></Link>
                     <span className="viewPageInstruction">{infoText}</span>
                 </div>
             </div>
