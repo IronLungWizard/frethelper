@@ -6,8 +6,8 @@ const BottomPanel = ({editedTuning, saveTuning}: {editedTuning: number[], saveTu
 
     return (
     <div className="bottomPanelWrapper">
-          <Link to='/'><button className="saveButton" onClick={() => {saveTuning(editedTuning)}}>Сохранить изменения</button></Link>
-          <Link to='/'><button className="exitButton">Отменить изменения</button></Link>
+          <Link to='/frethelper'><button className="saveButton" onClick={() => {saveTuning(editedTuning)}}>Сохранить изменения</button></Link>
+          <Link to='/frethelper'><button className="exitButton">Отменить изменения</button></Link>
     </div>
     )
 }

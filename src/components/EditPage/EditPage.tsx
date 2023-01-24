@@ -30,6 +30,7 @@ const EditPage = (
   }, [tuning]);
   return (
     <>
+    <MobileNavbar infoText={infoText} setModalPresetVisible={setModalPresetVisible}></MobileNavbar>
     <div className="editPageWrapper">
       <h1 className="pageHeader">Frethelper - путеводитель по гитарному грифу</h1>
       <div className="presetSection">

@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: __dirname + '/dist/',
-    publicPath: '/'
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -47,7 +47,7 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: true
   },
 
   devtool: prod ? undefined : 'source-map',
@@ -57,4 +57,5 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
   ],
+  
 };
