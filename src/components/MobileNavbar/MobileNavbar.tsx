@@ -6,7 +6,7 @@ import { useState } from 'react'
 import MenuCross from "../../../src/images/MenuCross.svg?url";
 import { Link } from 'react-router-dom'
 
-const MobileNavbar = ({infoText, setModalPresetVisible}: {infoText: string, setModalPresetVisible: Function}) => {
+const MobileNavbar = ({infoText, setModalPresetVisible, presetsAvailable}: {infoText: string, setModalPresetVisible: Function, presetsAvailable: Boolean}) => {
 const [mobileMenuVisible, setMobileMenuVisible] = useState(false)
 const [mobileInfoVisible, setMobileInfoVisible] = useState(false)
 
@@ -16,7 +16,12 @@ const [mobileInfoVisible, setMobileInfoVisible] = useState(false)
       <div className="navbarMenuWrapper" onClick={() => setMobileMenuVisible(false)}>
         <div className="navbarMenu" onClick={(e) => e.stopPropagation()}>
           <img src={MenuCross} onClick={() => setMobileMenuVisible(false)} className="closeVector"></img>
+          {presetsAvailable
+          ?
           <div className="navbarMenuPresetLink" onClick={() => {setModalPresetVisible(true); setMobileMenuVisible(false)}} >Выбрать инструмент</div>
+          :
+          <></>
+          }
           <Link to='/frethelper/edit' className="navbarMenuEditLink">Настроить инструмент</Link>
         </div>
       </div>:<></>}

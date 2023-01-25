@@ -3,18 +3,23 @@ import './ViewPage.scss'
 import RegularFretboard from "../RegularFretboard/RegularFretboard";
 import { Link } from "react-router-dom";
 import MobileNavbar from "../MobileNavbar/MobileNavbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const ViewPage = ({tuning, setModalPresetVisible, instrumentLine}: 
-                  {tuning: number[], setModalPresetVisible: Function, instrumentLine: string}) => {
+const ViewPage = ({setTuning, tuning, setModalPresetVisible, instrumentLine}: 
+                  {setTuning: Function, tuning: number[], setModalPresetVisible: Function, instrumentLine: string}) => {
   
 const [stringCount, setStringCount] = useState(15)                   
 const infoText = `Для изменения строя или количества струн нажмите “Настроить инструмент”\n
         Для смены пресета инструмента нажмите “Сменить инструмент”
     `         
+    useEffect(() => {
+        if (localStorage.getItem("tuning")) {
+            setTuning(JSON.parse(localStorage.getItem("tuning") || '{}'))
+        }
+      }, [tuning]);
     return (
         <>  
-            <MobileNavbar infoText={infoText} setModalPresetVisible={setModalPresetVisible}></MobileNavbar>
+            <MobileNavbar presetsAvailable={true} infoText={infoText} setModalPresetVisible={setModalPresetVisible}></MobileNavbar>
             <div className="viewPageWrapper">
                 <h1 className="pageHeader">Frethelper - путеводитель по гитарному грифу</h1>
                 <div className="presetSection">

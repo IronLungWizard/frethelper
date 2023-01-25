@@ -63,7 +63,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "frethelper",
-      element:  <ViewPage instrumentLine={instrumentLine} tuning={tuning} setModalPresetVisible={setModalPresetVisible}></ViewPage>,
+      element:  <ViewPage setTuning={setTuning} instrumentLine={instrumentLine} tuning={tuning} setModalPresetVisible={setModalPresetVisible}></ViewPage>,
     },
     {
       path: "frethelper/edit",
